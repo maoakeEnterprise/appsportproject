@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class boutonMenuHomePage extends StatelessWidget {
+// ignore: must_be_immutable
+class BoutonMenuHomePage extends StatelessWidget {
   IconData iconData;
   Color color;
   double width;
 
-  boutonMenuHomePage({Key key,this.iconData,this.color,}) : super(key: key);
+  BoutonMenuHomePage({Key key,this.iconData,this.color,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
