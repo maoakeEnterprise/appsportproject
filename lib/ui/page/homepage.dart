@@ -1,3 +1,4 @@
+import 'package:appsportproject/ui/widgets/headermenuelementwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:appsportproject/ui/themes/themes.dart';
 import 'package:test/test.dart';
@@ -15,8 +16,6 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             height: 70,
@@ -24,31 +23,11 @@ class HomePage extends StatelessWidget {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               children: [
-                Container(
-                  width: 70,
-                  color: Colors.cyanAccent,
-                  child: const Center(child: Text("TEXT")),
-                ),
+                boutonMenuHomePage(iconData: Icons.settings,color: Colors.greenAccent),
                 const SizedBox(width: 30),
-                InkWell(
-                  child: Container(
-                    width: 70,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.deepPurple,
-                    ),
-                    child: const Icon(Icons.auto_graph_outlined,size: 70,)
-                  ),
-                  onTap: (){
-
-                  },
-                ),
+                boutonMenuHomePage(iconData: Icons.auto_graph,color: Colors.deepPurpleAccent),
                 const SizedBox(width: 30),
-                Container(
-                  width: 70,
-                  color: Colors.greenAccent,
-                  child: const Center(child: Text("TEXT")),
-                ),
+                boutonMenuHomePage(iconData: Icons.sports_handball,color: Colors.redAccent),
                 const SizedBox(width: 30),
               ],
             ),
@@ -57,10 +36,11 @@ class HomePage extends StatelessWidget {
             height: 20,
           ),
           Container(
-            width: 100,
+            width: double.infinity,
             height: 50,
             color: Colors.pinkAccent,
-            child: const Center(child: Text("TEXT"),),
+            child: const Text("Programme de sport"),
+            padding: const EdgeInsets.all(10),
           ),
           Expanded(child: ListView(
             scrollDirection: Axis.vertical,
