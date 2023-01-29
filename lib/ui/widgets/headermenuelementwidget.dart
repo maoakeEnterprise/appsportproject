@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class BoutonMenuHomePage extends StatelessWidget {
   AssetImage assetImage;
   double width;
+  String routeName;
 
-  BoutonMenuHomePage({Key key,this.assetImage,}) : super(key: key);
+  BoutonMenuHomePage({Key key,this.assetImage,this.routeName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class BoutonMenuHomePage extends StatelessWidget {
           ),
       ),
       onTap: (){
-
+        Navigator.pushNamed(context, routeName);
       },
     );
   }
