@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:appsportproject/ui/themes/themes.dart';
 import 'package:test/test.dart';
 
+import '../widgets/itemwidgetprogrammesport.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
 
@@ -18,16 +20,16 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 70,
+            height: 50,
             child: ListView(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               children: [
-                BoutonMenuHomePage(iconData: Icons.settings,color: Colors.greenAccent),
+                BoutonMenuHomePage(assetImage: const AssetImage("assets/images/engrenages.png")),
                 const SizedBox(width: 30),
-                BoutonMenuHomePage(iconData: Icons.auto_graph,color: Colors.deepPurpleAccent),
+                BoutonMenuHomePage(assetImage: const AssetImage("assets/images/analytique.png")),
                 const SizedBox(width: 30),
-                BoutonMenuHomePage(iconData: Icons.sports_handball,color: Colors.redAccent),
+                BoutonMenuHomePage(assetImage: const AssetImage("assets/images/programme.png")),
                 const SizedBox(width: 30),
               ],
             ),
@@ -38,33 +40,17 @@ class HomePage extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 50,
-            color: Colors.pinkAccent,
-            child: const Text("Programme de sport"),
+            child: Text("Programme de sport", style: CustomThemes.secondTypeTitle,),
             padding: const EdgeInsets.all(10),
           ),
           Expanded(child: ListView(
+            shrinkWrap: true,
             scrollDirection: Axis.vertical,
             children: [
-              Container(
-                color: Colors.redAccent,
-                height: 300,
-                child: const Center(child: Text("TEXT")),
-              ),
-              Container(
-                height: 300,
-                color: Colors.blue,
-                child: const Center(child: Text("TEXT")),
-              ),
-              Container(
-                height: 300,
-                color: Colors.green,
-                child: const Center(child: Text("TEXT")),
-              ),
-              Container(
-                height: 300,
-                color: Colors.white54,
-                child: const Center(child: Text("TEXT")),
-              ),
+              ItemWidgetTrainings(color: Colors.redAccent,),
+              ItemWidgetTrainings(color: Colors.cyan,),
+              ItemWidgetTrainings(color: Colors.purpleAccent,),
+              ItemWidgetTrainings(color: Colors.purpleAccent,),
             ],
           ))
         ],
