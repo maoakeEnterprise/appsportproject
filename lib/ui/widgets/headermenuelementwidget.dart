@@ -12,7 +12,7 @@ class BoutonMenuHomePage extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(15),
       child: Container(
-          width: 50,
+          width: 70,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             color: Colors.cyanAccent.withAlpha(60),

@@ -1,7 +1,6 @@
 import 'package:appsportproject/ui/widgets/headermenuelementwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:appsportproject/ui/themes/themes.dart';
-import 'package:test/test.dart';
 
 import '../widgets/itemwidgetprogrammesport.dart';
 
@@ -13,14 +12,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Bienvenue", style: CustomThemes.headerAppBarTextStyle,),
+        title: const Text("Bienvenue"),
         elevation: 0,
         backgroundColor: Colors.white,
       ),
       body: Column(
         children: [
-          Container(
-            height: 50,
+          SizedBox(
+            height: 70,
             child: ListView(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
