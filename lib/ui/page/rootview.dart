@@ -18,7 +18,7 @@ class RootView extends StatelessWidget {
         "/" :  (context)=>const HomePage(),
         "settings": (context)=>const SettingsPage(),
         "graph": (context)=> const GraphPage(),
-        "exercice": (context)=>const ExercicesPage(),
+        "exercice": (context)=> ExercicesPage(),
       },
     );
   }

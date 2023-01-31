@@ -5,7 +5,7 @@ import '../widgets/widgetboutonexercice.dart';
 import '../widgets/widgetboutonheaderexercice.dart';
 
 class ExercicesPage extends StatelessWidget {
-  const ExercicesPage({Key key}) : super(key: key);
+  ExercicesPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,56 +22,72 @@ class ExercicesPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          const SizedBox(height: 20,),
-          Row(
-            children: [
-              const SizedBox(width: 20,),
-              Flexible(
-                child: TextField(
-                  cursorColor: Colors.black,
-                  decoration: CustomThemes.textFieldStyle,
-                ),
-              ),
-              const SizedBox(width: 20,),
-            ],
-          ),
-          const SizedBox(height: 10,),
-          Row(
-            children: [
-              const SizedBox(width: 20,),
-              Flexible(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ButtonHeaderExercice(text: "Haut du corps",),
-                      const SizedBox(width: 20,),
-                      ButtonHeaderExercice(text: "Bras",),
-                      const SizedBox(width: 20,),
-                      ButtonHeaderExercice(text: "Bas du corps",),
-                    ],
-                  )
-              ),
-              const SizedBox(width: 20,),
-            ],
-          ),
+          searchSection,
+          rowBoutonSection,
           const SizedBox(height: 10,),
           Expanded(
-              child: ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                children: [
-                  ButtonExercice(),
-                  ButtonExercice(),
-                  ButtonExercice(),
-                  ButtonExercice(),
-                  ButtonExercice(),
-                  SizedBox(height: 20,)
-                ],
-              )
-          ),
+            child: ListView.builder(
+              itemCount: 2,
+                itemBuilder: (context,index){
+                return widgetExercice;
+                }
+            )
+          )
         ],
-      ),
+      )
     );
+
   }
+
+  Widget widgetExercice = Container(
+    margin: const EdgeInsets.all(20),
+    height: 100,
+    decoration: BoxDecoration(
+      color: Colors.green,
+      borderRadius: BorderRadius.circular(15)
+    ),
+  );
+  Widget searchSection = Container(
+    margin: const EdgeInsets.only(top: 5,left: 20,right: 20),
+    padding: const EdgeInsets.all(20),
+    decoration: BoxDecoration(
+      color: Colors.grey,
+      borderRadius: BorderRadius.circular(15),
+    ),
+  );
+
+  Widget rowBoutonSection = Container(
+    margin: const EdgeInsets.only(top: 10,left: 30,right: 30),
+    //color: Colors.redAccent,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(10),
+          width: 100,
+          decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(15)
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(10),
+          width: 100,
+          decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(15)
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(10),
+          width: 100,
+          decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(15)
+          ),
+        )
+      ],
+    ),
+  );
+
 }
