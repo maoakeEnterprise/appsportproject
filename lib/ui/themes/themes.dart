@@ -8,22 +8,27 @@ class CustomThemes{
   static TextStyle secondTypeTitle = const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold);
 
   static TextStyle widgetName = const TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold);
-  static TextStyle descriptifTitle = const TextStyle(fontSize: 20, color: Colors.white38, fontWeight: FontWeight.bold);
+  static TextStyle descriptifTitle = const TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.bold);
 
   static TextStyle howManyTimesTitle = const TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold);
 
   static InputDecoration textFieldStyle = InputDecoration(
       hintText: "nom exercice",
-    hintStyle: const TextStyle(color: Colors.grey,fontSize: 20),
-    fillColor: Colors.white,
-    filled: true,
+    hintStyle: const TextStyle(color: Colors.grey,fontSize: 15),
+    filled: false,
     border: OutlineInputBorder(
-      borderSide: const BorderSide(
-        width: 1,
-        color: Colors.black,
-      ),
+      borderSide: BorderSide.none,
       borderRadius: BorderRadius.circular(50)
-    )
+    ),
+  );
+  static InputDecoration textFieldStyle2 = InputDecoration(
+    hintText: "nom programme",
+    hintStyle: const TextStyle(color: Colors.grey,fontSize: 15),
+    filled: false,
+    border: OutlineInputBorder(
+        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(50)
+    ),
   );
 
   static ThemeData themeData = ThemeData(

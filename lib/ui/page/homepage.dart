@@ -1,8 +1,8 @@
-import 'package:appsportproject/ui/widgets/headermenuelementwidget.dart';
+import 'package:appsportproject/ui/widgets/homepagewidget/headermenuelementwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:appsportproject/ui/themes/themes.dart';
 
-import '../widgets/itemwidgetprogrammesport.dart';
+import '../widgets/homepagewidget/itemwidgetprogrammesport.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../themes/themes.dart';
+import '../../themes/themes.dart';
 
 class ItemWidgetTrainings extends StatelessWidget {
   Color color;
@@ -59,7 +59,7 @@ class ItemWidgetTrainings extends StatelessWidget {
           ),
         ),
         onTap: (){
-
+            Navigator.pushNamed(context, "programmepage");
         },
       ),
     );

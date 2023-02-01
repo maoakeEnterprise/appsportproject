@@ -1,10 +1,13 @@
 import 'package:appsportproject/ui/page/exercicespage.dart';
 import 'package:appsportproject/ui/page/graphpage.dart';
 import 'package:appsportproject/ui/page/homepage.dart';
+import 'package:appsportproject/ui/page/programmepage.dart';
 import 'package:flutter/material.dart';
 import 'package:appsportproject/ui/page/settingspage.dart';
 
 import '../themes/themes.dart';
+import 'createexercice.dart';
+import 'exoprogramme.dart';
 
 class RootView extends StatelessWidget {
   const RootView({Key key}) : super(key: key);
@@ -18,7 +21,10 @@ class RootView extends StatelessWidget {
         "/" :  (context)=>const HomePage(),
         "settings": (context)=>const SettingsPage(),
         "graph": (context)=> const GraphPage(),
-        "exercice": (context)=> ExercicesPage(),
+        "exercice": (context)=> const ExercicesPage(),
+        "nouveauexercice": (context)=> const CreateExercice(),
+        "programmepage": (context)=> const ProgrammePage(),
+        "exoprogramme": (context)=> const ExoProgramme(),
       },
     );
   }
