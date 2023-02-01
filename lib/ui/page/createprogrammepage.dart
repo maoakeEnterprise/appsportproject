@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/programmewidget/textfilednomprogramme.dart';
 
-class ProgrammePage extends StatelessWidget {
-  const ProgrammePage({Key key}) : super(key: key);
+class CreateProgrammePage extends StatelessWidget {
+  const CreateProgrammePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
